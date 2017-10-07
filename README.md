@@ -1,5 +1,5 @@
 ## Introduction
-The `node-core` is a Node.js framework based Alibaba's Egg.js.
+The `node-core` is a Node.js framework based on Alibaba's Egg.js.
 
 ## Installation
 ```bash
