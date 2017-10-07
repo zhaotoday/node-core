@@ -1,6 +1,6 @@
 {
   "name": "node-core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A node framework based egg.js.",
   "dependencies": {
     "egg": "^1.4.0"
@@ -11,6 +11,7 @@
     "egg-bin": "^3.4.0",
     "egg-ci": "^1.7.0",
     "egg-mock": "^3.7.0",
+    "eslint": "^4.8.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.2.0",
