@@ -1,7 +1,7 @@
 {
   "name": "node-core",
-  "version": "0.0.6",
-  "description": "A node framework based egg.js.",
+  "version": "0.0.7",
+  "description": "A Node.js framework based Alibaba's Egg.js",
   "dependencies": {
     "egg": "^1.4.0",
     "egg-view-ejs": "^1.1.0"

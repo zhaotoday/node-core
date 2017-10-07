@@ -1,26 +1,22 @@
-# node-core
+## Introduction
+The `node-core` is a Node.js framework based Alibaba's Egg.js.
 
-a node framework based egg.js
-
-## QuickStart
-
+## Installation
 ```bash
-$ npm install
-$ npm test
+$ npm install --save node-core
 ```
 
-publish your framework to npm, then change app's dependencies:
-
-```js
-// {app_root}/index.js
-require('node-core').startCluster({
-  baseDir: __dirname,
-  // port: 7001, // default to 7001
-});
-
-```
+## Example
+Please visit a full example [here](https://github.com/zhaotoday/node-core/issues).
 
 ## Questions & Suggestions
+Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+## Supported plugins
+- [egg-view-ejs](https://github.com/eggjs/egg-view-ejs)
+- [egg-mysql](https://github.com/eggjs/egg-mysql)
+- [egg-sequelize](https://github.com/eggjs/egg-sequelize)
 
+## Docs
+- [Official Website of Egg](https://eggjs.org/zh-cn/)
+- [How to develop a framework](https://eggjs.org/zh-cn/advanced/framework.html)
