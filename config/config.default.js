@@ -1,9 +1,13 @@
 module.exports = appInfo => {
   const config = {}
 
-  config.test = {
-    key: appInfo.name + '_123456'
+  config.view = {
+    mapping: {
+      '.ejs': 'ejs'
+    }
   }
+
+  config.ejs = {}
 
   return config
 }

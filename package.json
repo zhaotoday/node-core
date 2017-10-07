@@ -1,9 +1,10 @@
 {
   "name": "node-core",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "A node framework based egg.js.",
   "dependencies": {
-    "egg": "^1.4.0"
+    "egg": "^1.4.0",
+    "egg-view-ejs": "^1.1.0"
   },
   "devDependencies": {
     "autod": "^2.8.0",
