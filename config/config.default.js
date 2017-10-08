@@ -9,5 +9,9 @@ module.exports = appInfo => {
 
   config.ejs = {}
 
+  config.sequelize = {
+    dialect: 'mysql'
+  }
+
   return config
 }
