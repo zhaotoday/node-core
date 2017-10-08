@@ -1,19 +1,19 @@
 {
   "name": "node-core",
-  "version": "0.0.11",
+  "version": "0.0.17",
   "description": "A Node.js framework based on Alibaba's Egg.js",
   "dependencies": {
-    "egg": "^1.4.0",
+    "egg": "^1.9.0",
     "egg-sequelize": "^3.1.0",
     "egg-view-ejs": "^1.1.0",
     "mysql2": "^1.4.2"
   },
   "devDependencies": {
-    "autod": "^2.8.0",
+    "autod": "^2.9.0",
     "autod-egg": "^1.0.0",
-    "egg-bin": "^3.4.0",
-    "egg-ci": "^1.7.0",
-    "egg-mock": "^3.7.0",
+    "egg-bin": "^3.7.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.12.2",
     "eslint": "^4.8.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
@@ -49,6 +49,7 @@
   "author": "zhaojintian",
   "files": [
     "app",
+    "app.js",
     "config",
     "lib",
     "index.js"

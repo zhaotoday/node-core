@@ -7,6 +7,10 @@ module.exports = appInfo => {
     }
   }
 
+  config.view = {
+    defaultExtension: '.ejs'
+  }
+
   config.ejs = {}
 
   config.sequelize = {
