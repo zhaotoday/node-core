@@ -2,13 +2,10 @@ module.exports = appInfo => {
   const config = {}
 
   config.view = {
+    defaultExtension: '.ejs',
     mapping: {
       '.ejs': 'ejs'
     }
-  }
-
-  config.view = {
-    defaultExtension: '.ejs'
   }
 
   config.ejs = {}
