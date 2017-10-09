@@ -34,6 +34,22 @@ module.exports = app => {
       })
     }
 
+    async create (body) {
+      return this.getModel().create(body)
+    }
+
+    async update (id, body) {
+      return this.getModel().update(body, {
+        where: {id}
+      })
+    }
+
+    async destroy (ids) {
+      return this.getModel().destroy({
+        'where': {'id': ids}
+      })
+    }
+
     async getCount ({where = null} = {}) {
       return this.getModel().count({where})
     }
