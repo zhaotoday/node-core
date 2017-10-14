@@ -27,7 +27,7 @@ Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 - [前后端分离之JWT用户认证](http://lion1ou.win/2017/01/18/)
 
 ## Usage
-### Create `article` model:
+Create `articles` model:
 ```js
 // app/model/articles.js
 module.exports = app => {
@@ -72,7 +72,7 @@ module.exports = app => {
 ```
 
 
-### Create `article` service:
+Create `articles` service:
 ```js
 // app/service/articles.js
 module.exports = app => {
@@ -86,7 +86,7 @@ module.exports = app => {
 }
 ```
 
-### Create `article` controller
+Create `articles` controller
 ```js
 // app/controller/articles.js
 module.exports = app => {
