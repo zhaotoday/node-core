@@ -27,6 +27,51 @@ Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 - [前后端分离之JWT用户认证](http://lion1ou.win/2017/01/18/)
 
 ## Usage
+### Model
+```js
+// app/model/articles.js
+module.exports = app => {
+  const {STRING, TEXT, INTEGER} = app.Sequelize
+
+  return app.model.define('articles', {
+    id: {
+      type: INTEGER(8),
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false
+    },
+    author: {
+      type: STRING(50),
+      allowNull: true
+    },
+    title: {
+      type: STRING(200),
+      allowNull: false
+    },
+    subtitle: {
+      type: STRING(200),
+      allowNull: true
+    },
+    description: {
+      type: TEXT('tiny'),
+    },
+    content: {
+      type: TEXT('long'),
+      allowNull: true
+    },
+    image: {
+      type: INTEGER(8),
+      allowNull: true
+    },
+    category_id: {
+      type: INTEGER,
+      allowNull: true
+    }
+  })
+}
+```
+
+
 ### Service
 ```js
 // app/service/articles.js
