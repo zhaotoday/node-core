@@ -7,7 +7,7 @@ $ npm install --save node-core
 ```
 
 ## Example
-Please visit a full example [here](https://github.com/zhaotoday/node-core/issues).
+Please visit a full example [here](https://github.com/zhaotoday/egg.js).
 
 ## Questions & Suggestions
 Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
@@ -25,3 +25,33 @@ Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 
 ## References
 - [前后端分离之JWT用户认证](http://lion1ou.win/2017/01/18/)
+
+## Usage
+### Service
+```js
+// app/service/articles.js
+module.exports = app => {
+  return class extends app.Service {
+    constructor (ctx) {
+      super(ctx)
+
+      this.module = 'articles'
+    }
+  }
+}
+```
+
+### Controller
+```js
+// app/controller/articles.js
+module.exports = app => {
+  return class extends app.Controller {
+    constructor (ctx) {
+      super(ctx)
+
+      this.module = 'articles'
+      this.service = this.getService()
+    }
+  }
+}
+```
