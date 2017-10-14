@@ -19,11 +19,9 @@ Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 - [egg-cors](https://github.com/eggjs/egg-cors)
 - [egg-jwt](https://github.com/okoala/egg-jwt)
 
-## Docs
+## References
 - [Egg.js 官网](https://eggjs.org/zh-cn/)
 - [框架开发](https://eggjs.org/zh-cn/advanced/framework.html)
-
-## References
 - [前后端分离之JWT用户认证](http://lion1ou.win/2017/01/18/)
 
 ## Usage
@@ -86,7 +84,7 @@ module.exports = app => {
 }
 ```
 
-Create `articles` controller
+Create `articles` controller:
 ```js
 // app/controller/articles.js
 module.exports = app => {
