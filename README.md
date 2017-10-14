@@ -1,7 +1,7 @@
 ## Introduction
-The `node-core` is a Node.js framework based on Alibaba's Egg.js.
+`node-core` is a Node.js framework based on Alibaba's Egg.js.
 
-## Installation
+## Install
 ```bash
 $ npm install --save node-core
 ```
@@ -27,7 +27,7 @@ Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 - [前后端分离之JWT用户认证](http://lion1ou.win/2017/01/18/)
 
 ## Usage
-### Model
+### Create `article` model:
 ```js
 // app/model/articles.js
 module.exports = app => {
@@ -72,7 +72,7 @@ module.exports = app => {
 ```
 
 
-### Service
+### Create `article` service:
 ```js
 // app/service/articles.js
 module.exports = app => {
@@ -86,7 +86,7 @@ module.exports = app => {
 }
 ```
 
-### Controller
+### Create `article` controller
 ```js
 // app/controller/articles.js
 module.exports = app => {
