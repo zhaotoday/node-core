@@ -12,7 +12,7 @@ module.exports = app => {
       return this.ctx.model[firstUpperCase(this.module)]
     }
 
-    async findAll ({attributes = null, offset = 0, limit = 10, where = null, order = [['id', 'DESC']]} = {}) {
+    async find ({attributes = null, offset = 0, limit = 10, where = null, order = [['id', 'DESC']]} = {}) {
       return this.getModel().findAll({attributes, offset, limit, where, order})
     }
 
@@ -20,23 +20,19 @@ module.exports = app => {
       return this.getModel().findById(id)
     }
 
-    async findTop ({where = null, order = [['id', 'ASC']]} = {}) {
-      return this.getModel().findAll({limit: 1, order})
-    }
-
-    async create (body) {
-      return this.getModel().create(body)
-    }
-
-    async update (id, body) {
-      return this.getModel().update(body, {
+    async destroyById (id) {
+      return this.getModel().destroy({
         where: {id}
       })
     }
 
-    async destroy (id) {
-      return this.getModel().destroy({
-        'where': {id}
+    async create ({body = null} = {}) {
+      return this.getModel().create(body)
+    }
+
+    async update ({id, body = null} = {}) {
+      return this.getModel().update(body, {
+        where: {id}
       })
     }
 
