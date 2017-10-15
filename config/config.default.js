@@ -20,5 +20,7 @@ module.exports = appInfo => {
     allowHeaders: 'Authorization'
   }
 
+  config.pageSize = 10
+
   return config
 }
