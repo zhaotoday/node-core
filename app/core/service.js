@@ -4,12 +4,17 @@ module.exports = app => {
       super(ctx)
 
       this.module = ''
+      this.model = null
     }
 
     getModel () {
       const {firstUpperCase} = this.ctx.helper
 
-      return this.ctx.model[firstUpperCase(this.module)]
+      if (!this.model) {
+        this.model = this.ctx.model[firstUpperCase(this.module)]
+      }
+
+      return this.model
     }
 
     async find ({attributes = null, offset = 0, limit = 10, where = null, order = [['id', 'DESC']]} = {}) {

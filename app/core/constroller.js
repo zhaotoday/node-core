@@ -8,7 +8,11 @@ module.exports = app => {
     }
 
     getService (module) {
-      return this.ctx.service[module || this.module]
+      if (!this.service) {
+        this.service = this.ctx.service[module || this.module]
+      }
+
+      return this.service
     }
 
     async _index () {
@@ -16,24 +20,24 @@ module.exports = app => {
 
       this.ctx.status = 200
       this.ctx.body = {
-        count: await this.service.count({where}),
-        items: await this.service.find({offset, limit, where})
+        count: await this.getService().count({where}),
+        items: await this.getService().find({offset, limit, where})
       }
     }
 
     async _show () {
       this.ctx.status = 200
-      this.ctx.body = await this.service.findById(this.ctx.params.id)
+      this.ctx.body = await this.getService().findById(this.ctx.params.id)
     }
 
     async _create () {
       this.ctx.status = 201
-      this.ctx.body = await this.service.create({body: this.ctx.request.body})
+      this.ctx.body = await this.getService().create({body: this.ctx.request.body})
     }
 
     async _update () {
       this.ctx.status = 204
-      await this.service.update({
+      await this.getService().update({
         id: this.ctx.params.id,
         body: this.ctx.request.body
       })
@@ -41,7 +45,7 @@ module.exports = app => {
 
     async _destroy () {
       this.ctx.status = 204
-      await this.service.destroyById(this.ctx.params.id)
+      await this.getService().destroyById(this.ctx.params.id)
     }
   }
 }
