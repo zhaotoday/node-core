@@ -15,6 +15,12 @@ module.exports = app => {
       return this.service
     }
 
+    $ (data) {
+      return {
+        $: data || {}
+      }
+    }
+
     async _index () {
       const {offset, limit, where} = this.ctx.helper.formatQuery(this.ctx.request.query)
 
