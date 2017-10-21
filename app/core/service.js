@@ -17,15 +17,15 @@ module.exports = app => {
       return this.model
     }
 
-    async find ({attributes = null, offset = 0, limit = 10, where = null, order = [['id', 'DESC']]} = {}) {
-      return this.getModel().findAll({attributes, offset, limit, where, order})
+    async find ({id = '', attributes = null, offset = 0, limit = 10, where = null, order = [['id', 'DESC']]} = {}) {
+      if (id) {
+        return this.getModel().findById(id)
+      } else {
+        return this.getModel().findAll({attributes, offset, limit, where, order})
+      }
     }
 
-    async findById (id) {
-      return this.getModel().findById(id)
-    }
-
-    async destroyById (id) {
+    async destroy ({id}) {
       return this.getModel().destroy({
         where: {id}
       })

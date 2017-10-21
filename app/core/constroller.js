@@ -27,7 +27,7 @@ module.exports = app => {
 
     async _show () {
       this.ctx.status = 200
-      this.ctx.body = await this.getService().findById(this.ctx.params.id)
+      this.ctx.body = await this.getService().find({id: this.ctx.params.id})
     }
 
     async _create () {
@@ -45,7 +45,7 @@ module.exports = app => {
 
     async _destroy () {
       this.ctx.status = 204
-      await this.getService().destroyById(this.ctx.params.id)
+      await this.getService().destroy({id: this.ctx.params.id})
     }
   }
 }

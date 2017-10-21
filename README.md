@@ -93,7 +93,6 @@ module.exports = app => {
       super(ctx)
 
       this.module = 'articles'
-      this.service = this.getService()
     }
   }
 }
