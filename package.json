@@ -1,10 +1,11 @@
 {
   "name": "node-core",
-  "version": "0.1.10",
+  "version": "0.1.15",
   "description": "A Node.js framework based on Alibaba's Egg.js",
   "dependencies": {
     "egg": "^1.9.0",
     "egg-cors": "^1.2.0",
+    "egg-jwt": "^2.2.0",
     "egg-sequelize": "^3.1.0",
     "egg-view-ejs": "^1.1.0",
     "mysql2": "^1.4.2"

@@ -53,5 +53,27 @@ module.exports = app => {
       this.ctx.status = 204
       await this.getService().destroy({id: this.ctx.params.id})
     }
+
+    /**
+     * 签发 token
+     * @param userInfo 不敏感的用户信息
+     * @param expiresIn 过期时间
+     *   如：60=60*1000ms、'1d'=24*60*60*1000ms、'1h'=60*60*1000ms、'1m'=60*1000ms、'1s'=60ms、'1y'=365.25*24*60*60*1000
+     * @returns {string}
+     */
+    sign ({userInfo, expiresIn}) {
+      const {jwt, config} = this.app
+      return jwt.sign(userInfo, config.jwt.secret, {expiresIn})
+    }
+
+    /**
+     * 校验 token
+     * @returns {object}
+     */
+    verify () {
+      const token = this.ctx.header.authorization
+      const {jwt, config} = this.app
+      return jwt.verify(token, config.jwt.secret)
+    }
   }
 }

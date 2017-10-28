@@ -22,7 +22,12 @@ Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 ## References
 - [Egg.js 官网](https://eggjs.org/zh-cn/)
 - [框架开发](https://eggjs.org/zh-cn/advanced/framework.html)
+- [Egg.js 中间件](https://github.com/eggjs/egg/blob/master/docs/source/zh-cn/basics/middleware.md)
 - [前后端分离之JWT用户认证](http://lion1ou.win/2017/01/18/)
+- [NodeJs JsonWebToken](http://blog.csdn.net/qq_27818541/article/details/53067387)
+- [NodeJs使用json web token验证REST服务](http://blog.csdn.net/offbye/article/details/47617367)
+- [JWT Example](https://github.com/yin-fan/todoList)
+- [sequelizejs docs](http://docs.sequelizejs.com/)
 
 ## Usage
 Create `articles` model:
