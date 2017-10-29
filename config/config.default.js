@@ -16,7 +16,7 @@ module.exports = appInfo => {
     cors: {
       origin: '*',
       allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
-      allowHeaders: 'Authorization'
+      allowHeaders: 'Content-Type,Authorization'
     },
 
     jwt: {},

@@ -31,7 +31,7 @@ module.exports = app => {
       this.response({
         status: 200,
         data: {
-          count: await this.getService().count({where}),
+          total: await this.getService().count({where}),
           items: await this.getService().find({offset, limit, where})
         }
       })

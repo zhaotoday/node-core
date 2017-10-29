@@ -31,7 +31,7 @@ module.exports = {
     const {pageSize} = this.app.config
     const {offset = 0, limit = pageSize, where = null, order = [['id', 'DESC']]} = query
 
-    return {offset, limit, where: toObj(where), order}
+    return {offset: +offset, limit: +limit, where: toObj(where), order}
   },
 
   /**
