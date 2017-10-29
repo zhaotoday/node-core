@@ -1,28 +1,26 @@
 module.exports = appInfo => {
-  const config = {}
+  return {
+    view: {
+      defaultExtension: '.ejs',
+      mapping: {
+        '.ejs': 'ejs'
+      }
+    },
 
-  config.view = {
-    defaultExtension: '.ejs',
-    mapping: {
-      '.ejs': 'ejs'
-    }
+    ejs: {},
+
+    sequelize: {
+      dialect: 'mysql'
+    },
+
+    cors: {
+      origin: '*',
+      allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+      allowHeaders: 'Authorization'
+    },
+
+    jwt: {},
+
+    pageSize: 10
   }
-
-  config.ejs = {}
-
-  config.sequelize = {
-    dialect: 'mysql'
-  }
-
-  config.cors = {
-    origin: '*',
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
-    allowHeaders: 'Authorization'
-  }
-
-  config.jwt = {}
-
-  config.pageSize = 10
-
-  return config
 }
