@@ -11,7 +11,7 @@ module.exports = {
 
   /**
    * 查询条件转换
-   * @type {object}
+   * @type {Object}
    */
   where: {
     toObj (str) {
@@ -24,7 +24,7 @@ module.exports = {
 
   /**
    * 格式化查询
-   * @returns {object}
+   * @returns {Object}
    */
   formatQuery (query) {
     const {toObj} = this.where

@@ -10,7 +10,7 @@ module.exports = app => {
     /**
      * 获取当前 service
      * @param module 模块
-     * @returns {object}
+     * @returns {Object}
      */
     getService (module) {
       if (!this.service) {
@@ -22,7 +22,7 @@ module.exports = app => {
 
     /**
      * 获取列表
-     * @returns {promise}
+     * @returns {Promise}
      * @private
      */
     async _index () {
@@ -39,7 +39,7 @@ module.exports = app => {
 
     /**
      * 获取单条记录
-     * @returns {promise}
+     * @returns {Promise}
      * @private
      */
     async _show () {
@@ -51,7 +51,7 @@ module.exports = app => {
 
     /**
      * 新增
-     * @returns {promise}
+     * @returns {Promise}
      * @private
      */
     async _create () {
@@ -63,7 +63,7 @@ module.exports = app => {
 
     /**
      * 更新
-     * @returns {promise}
+     * @returns {Promise}
      * @private
      */
     async _update () {
@@ -76,7 +76,7 @@ module.exports = app => {
 
     /**
      * 删除
-     * @returns {promise}
+     * @returns {Promise}
      * @private
      */
     async _destroy () {
@@ -98,7 +98,7 @@ module.exports = app => {
 
     /**
      * 校验 token
-     * @returns {object}
+     * @returns {Object}
      */
     verify () {
       const token = this.ctx.header.authorization
@@ -109,7 +109,7 @@ module.exports = app => {
     /**
      * 将数据注册到 $
      * @param data 数据
-     * @returns {object}
+     * @returns {Object}
      */
     $ (data) {
       return {

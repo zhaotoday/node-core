@@ -9,7 +9,7 @@ module.exports = app => {
 
     /**
      * 获取当前模型
-     * @returns {object}
+     * @returns {Object}
      */
     getModel () {
       const {firstUpperCase} = this.ctx.helper
@@ -23,7 +23,7 @@ module.exports = app => {
 
     /**
      * 查询
-     * @returns {promise}
+     * @returns {Promise}
      */
     async find ({id = '', attributes = null, offset = 0, limit = 10, where = null, order = [['id', 'DESC']]} = {}) {
       if (id) {
@@ -35,7 +35,7 @@ module.exports = app => {
 
     /**
      * 删除
-     * @returns {promise}
+     * @returns {Promise}
      */
     async destroy ({id}) {
       return this.getModel().destroy({
@@ -45,7 +45,7 @@ module.exports = app => {
 
     /**
      * 新增
-     * @returns {promise}
+     * @returns {Promise}
      */
     async create ({body = null} = {}) {
       return this.getModel().create(body)
@@ -53,7 +53,7 @@ module.exports = app => {
 
     /**
      * 更新
-     * @returns {promise}
+     * @returns {Promise}
      */
     async update ({id, body = null} = {}) {
       return this.getModel().update(body, {
@@ -63,7 +63,7 @@ module.exports = app => {
 
     /**
      * 获取记录总数
-     * @returns {promise}
+     * @returns {Promise}
      */
     async count ({where = null} = {}) {
       return this.getModel().count({where})
