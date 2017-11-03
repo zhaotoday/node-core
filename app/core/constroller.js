@@ -111,9 +111,12 @@ module.exports = app => {
      * @param data 数据
      * @returns {Object}
      */
-    $ (data) {
+    $ (data = {}) {
       return {
-        $: data || {}
+        $: {
+          settings: {},
+          ...data
+        }
       }
     }
 

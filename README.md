@@ -28,6 +28,8 @@ Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 - [NodeJs使用json web token验证REST服务](http://blog.csdn.net/offbye/article/details/47617367)
 - [JWT Example](https://github.com/yin-fan/todoList)
 - [sequelizejs docs](http://docs.sequelizejs.com/)
+- [EJS 中文文档](https://segmentfault.com/a/1190000004286562)
+- [EJS 模板语言使用](https://www.w3cschool.cn/weflow/weflow-ejs.html)
 
 ## Usage
 Create `articles` model:
