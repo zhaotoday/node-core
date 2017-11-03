@@ -9,13 +9,14 @@ module.exports = app => {
 
     /**
      * 获取当前模型
+     * @param module 模块
      * @returns {Object}
      */
-    getModel () {
-      const {firstUpperCase} = this.ctx.helper
+    getModel (module) {
+      const {capitalize} = this.ctx.helper
 
       if (!this.model) {
-        this.model = this.ctx.model[firstUpperCase(this.module)]
+        this.model = this.ctx.model[capitalize(module || this.module)]
       }
 
       return this.model

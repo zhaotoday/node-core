@@ -5,7 +5,7 @@ module.exports = {
    * 单词首字母大写
    * @returns {string}
    */
-  firstUpperCase ([first, ...rest]) {
+  capitalize ([first, ...rest]) {
     return first.toUpperCase() + rest.join('')
   },
 
