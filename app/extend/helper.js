@@ -55,5 +55,14 @@ module.exports = {
     ret += `</div>`
 
     return ret
+  },
+
+  /**
+   * 过滤分页参数
+   * @param page 分页参数
+   * @returns {number}
+   */
+  filterPage (page) {
+    return /^[0-9]*[1-9][0-9]*$/.test(page) ? +page : 1
   }
 }
