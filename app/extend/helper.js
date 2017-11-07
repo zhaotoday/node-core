@@ -10,28 +10,13 @@ module.exports = {
   },
 
   /**
-   * 查询条件转换
-   * @type {Object}
-   */
-  where: {
-    toObj (str) {
-      return JSON.parse(str)
-    },
-    toStr (obj) {
-      return JSON.stringify(obj)
-    }
-  },
-
-  /**
    * 格式化查询
    * @returns {Object}
    */
   formatQuery (query) {
-    const {toObj} = this.where
-    const {pageSize} = this.app.config
-    const {offset = 0, limit = pageSize, where = null, order = [['id', 'DESC']]} = query
+    const {offset = 0, limit = 10, where = '', order = [['id', 'DESC']]} = query
 
-    return {offset: +offset, limit: +limit, where: toObj(where), order}
+    return {offset: +offset, limit: +limit, where: JSON.parse(where), order}
   },
 
   /**
@@ -66,6 +51,8 @@ module.exports = {
       ret += `<a class="page-next" href="${url}?offset=${offset + limit}">下一页</a>`
       ret += `<a class="page-last" href="${url}?offset=${(pages - 1) * limit}">尾页</a>`
     }
+
+    ret = `</div>`
 
     return ret
   }
