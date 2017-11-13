@@ -58,11 +58,11 @@ module.exports = {
   },
 
   /**
-   * 过滤分页参数
+   * 格式化分页参数
    * @param page 分页参数
    * @returns {number}
    */
-  filterPage (page) {
+  formatPage (page) {
     return /^[0-9]*[1-9][0-9]*$/.test(page) ? +page : 1
   }
 }

@@ -20,6 +20,8 @@ Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 - [egg-jwt](https://github.com/okoala/egg-jwt)
 
 ## References
+- [Node.js 中文网](http://nodejs.cn/)
+- [Node之旅](http://www.hunaisong.cn/category/tech-note/node%E4%B9%8B%E6%97%85/)
 - [Egg.js 官网](https://eggjs.org/zh-cn/)
 - [框架开发](https://eggjs.org/zh-cn/advanced/framework.html)
 - [Egg.js 中间件](https://github.com/eggjs/egg/blob/master/docs/source/zh-cn/basics/middleware.md)
