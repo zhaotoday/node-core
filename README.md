@@ -1,25 +1,25 @@
-## Introduction
-`node-core` is a Node.js framework based on Alibaba's Egg.js.
+## 简介
+`node-core` 是一个基于 Egg.js 的 Node.js 服务端基础框架。
 
-## Install
+## 安装
 ```bash
 $ npm install --save node-core
 ```
 
-## Example
-Please visit a full example [here](https://github.com/zhaotoday/egg.js).
+## 在线案例
+一个完整的案例：[链接](https://github.com/zhaotoday/egg.js)。
 
-## Questions & Suggestions
-Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
+## 问题和建议
+请提 issue：[链接](https://github.com/zhaotoday/node-core/issues)。
 
-## Supported plugins
+## 已支持的插件
 - [egg-view-ejs](https://github.com/eggjs/egg-view-ejs)
 - [egg-mysql](https://github.com/eggjs/egg-mysql)
 - [egg-sequelize](https://github.com/eggjs/egg-sequelize)
 - [egg-cors](https://github.com/eggjs/egg-cors)
 - [egg-jwt](https://github.com/okoala/egg-jwt)
 
-## References
+## 参考
 - [Node.js 中文网](http://nodejs.cn/)
 - [Node之旅](http://www.hunaisong.cn/category/tech-note/node%E4%B9%8B%E6%97%85/)
 - [Egg.js 官网](https://eggjs.org/zh-cn/)
@@ -33,8 +33,8 @@ Please open an issue [here](https://github.com/zhaotoday/node-core/issues).
 - [EJS 中文文档](https://segmentfault.com/a/1190000004286562)
 - [EJS 模板语言使用](https://www.w3cschool.cn/weflow/weflow-ejs.html)
 
-## Usage
-Create `articles` model:
+## 使用方法
+创建 `articles` model:
 ```js
 // app/model/articles.js
 module.exports = app => {
@@ -79,7 +79,7 @@ module.exports = app => {
 ```
 
 
-Create `articles` service:
+创建 `articles` service:
 ```js
 // app/service/articles.js
 module.exports = app => {
@@ -93,7 +93,7 @@ module.exports = app => {
 }
 ```
 
-Create `articles` controller:
+创建 `articles` controller:
 ```js
 // app/controller/articles.js
 module.exports = app => {
